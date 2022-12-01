@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,24 +53,24 @@
   <div class="container" id="gs_container" style="display: none">
     <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/General-Settings"
       target="_blank">?</a>
-    <h1>General Settings</h1>
+    <h1>Opzioni Generali</h1>
     <div class="form">
       <div>
         <div class="form-control">
-          <label>Name:</label>
+          <label>Nome:</label>
           <input type="text" id="sys_name">
         </div>
         <div class="form-control" id="sys_mode_container" style="display: none">
-          <label>Mode:</label>
+          <label>Funzione:</label>
           <select id="sys_mode">
             <option id="sys_mode_0" value="0">Switch</option>
-            <option id="sys_mode_1" value="1">Roller Shutter</option>
-            <option id="sys_mode_2" value="2">Garage Door Opener</option>
+            <option id="sys_mode_1" value="1">Tapparella</option>
+            <option id="sys_mode_2" value="2">Garage</option>
             <option id="sys_mode_3" value="3">RGB</option>
             <option id="sys_mode_4" value="4">RGBW</option>
             <option id="sys_mode_5" value="5">RGB+W</option>
             <option id="sys_mode_6" value="6">CCT</option>
-            <option id="sys_mode_7" value="7">White Mode</option>
+            <option id="sys_mode_7" value="7">Modalità Bianca</option>
           </select>
         </div>
         <div class="button-container">
@@ -87,15 +87,15 @@
   <div class="container" id="homekit_container" style="display: none">
     <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/HomeKit-settings"
       target="_blank">?</a>
-    <h1>HomeKit Settings</h1>
+    <h1>Settaggi HomeKit</h1>
     <div class="form">
       <div>
         <div class="form-control">
-          <label>Paired:</label>
+          <label>Accoppiato:</label>
           <span id="hap_paired"></span>
         </div>
         <div class="form-control">
-          <label>Connections:</label>
+          <label>Connessioni:</label>
           <ul id="hap_conn_stats" class="comma-list">
             <li id="hap_ip_conns_pending"></li>
             <li id="hap_ip_conns_active"></li>
@@ -104,7 +104,7 @@
         </div>
         <div class="button-container">
           <button id="hap_setup_btn">
-            <label><span id="hap_setup_spinner"></span>Setup</label>
+            <label><span id="hap_setup_spinner"></span>Installa</label>
           </button>
           <button id="hap_reset_btn">
             <label><span id="hap_reset_spinner"></span>Reset</label>
@@ -135,7 +135,7 @@
   <div class="container" id="wifi_container" style="display: none">
     <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/WiFi-Settings"
       target="_blank">?</a>
-    <h1>WiFi Settings</h1>
+    <h1>Impostazioni WI-FI</h1>
 
     <div class="tab_wrapper" id="wifi_container">
       <input class="tab_radio" id="one" name="group" type="radio" checked>
@@ -150,14 +150,14 @@
         <div class="panel" id="panel1">
           <div class="form">
             <div class="form-control">
-              <label>Enable:</label>
+              <label>Abilita:</label>
               <label class="switch">
                 <input type="checkbox" id="wifi_en">
                 <span class="slider round"></span>
               </label>
             </div>
             <div class="form-control">
-              <label>Network:</label>
+              <label>Nome Rete (SSID):</label>
               <input type="text" id="wifi_ssid">
             </div>
             <div class="form-control">
@@ -165,7 +165,7 @@
               <input type="password" id="wifi_pass" placeholder="(empty)">
             </div>
             <div class="form-control">
-              <label>Static IP:</label>
+              <label>Indirizzo IP STATICO:</label>
               <label class="switch">
                 <input type="checkbox" id="wifi_ip_en">
                 <span class="slider round"></span>
@@ -190,14 +190,14 @@
         <div class="panel" id="panel2">
           <div class="form">
             <div class="form-control">
-              <label>Enable:</label>
+              <label>Abilita:</label>
               <label class="switch">
                 <input type="checkbox" id="wifi1_en">
                 <span class="slider round"></span>
               </label>
             </div>
             <div class="form-control">
-              <label>Network:</label>
+              <label>Nome Rete (SSID):</label>
               <input type="text" id="wifi1_ssid">
             </div>
             <div class="form-control">
@@ -205,7 +205,7 @@
               <input type="password" id="wifi1_pass" placeholder="(empty)">
             </div>
             <div class="form-control">
-              <label>Static IP:</label>
+              <label>Indirizzo IP STATICO:</label>
               <label class="switch">
                 <input type="checkbox" id="wifi1_ip_en">
                 <span class="slider round"></span>
@@ -230,14 +230,14 @@
         <div class="panel" id="panel3">
           <div class="form">
             <div class="form-control">
-              <label>Enable permanently:</label>
+              <label>Abilita Permanentemente:</label>
               <label class="switch">
                 <input type="checkbox" id="wifi_ap_en">
                 <span class="slider round"></span>
               </label>
             </div>
             <div class="form-control">
-              <label>Network:</label>
+              <label>Nome Rete (SSID):</label>
               <input type="text" id="wifi_ap_ssid">
             </div>
             <div class="form-control">
@@ -251,19 +251,19 @@
     <div class="form">
       <div>
         <div class="form-control">
-          <label>Power saving:</label>
+          <label>Risparmio Energetico:</label>
           <select id="wifi_sta_ps_mode">
-            <option id="wifi_sta_ps_mode_0" value="0">Disabled</option>
+            <option id="wifi_sta_ps_mode_0" value="0">Disabilitato</option>
             <option id="wifi_sta_ps_mode_1" value="1">1</option>
             <option id="wifi_sta_ps_mode_2" value="2">2</option>
           </select>
         </div>
         <div class="form-control" id="wifi_status_container">
-          <label>Status:</label>
+          <label>Stato:</label>
           <span id="wifi_status"></span>
         </div>
         <div class="form-control" id="wifi_conn_ssid_container">
-          <label>Network:</label>
+          <label>Rete:</label>
           <span id="wifi_conn_ssid"></span>
         </div>
         <div class="form-control" id="wifi_conn_ip_container">
@@ -275,12 +275,12 @@
           <span id="wifi_conn_rssi"></span>
         </div>
         <div class="form-control" id="mac_address_container">
-          <label>MAC:</label>
+          <label>Indirizzo MAC:</label>
           <span id="mac_address"></span>
         </div>
         <div class="button-container">
           <button id="wifi_save_btn">
-            <label><span id="wifi_spinner"></span>Save</label>
+            <label><span id="wifi_spinner"></span>Salva</label>
           </button>
         </div>
       </div>
@@ -290,23 +290,23 @@
   <div class="container" id="sec_container" style="display: none">
     <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/Security-Settings"
       target="_blank">?</a>
-    <h1>Security Settings</h1>
+    <h1>Impostazioni Sicurezza</h1>
     <div class="form">
       <div>
         <div class="form-control" id="sec_old_pass_container">
-          <label>Old Password:</label>
+          <label>Vecchia Password:</label>
           <input type="password" id="sec_old_pass">
         </div>
         <div class="form-control">
-          <label>New Password:</label>
+          <label>Nuova Password:</label>
           <input type="password" id="sec_new_pass">
         </div>
         <div class="button-container">
           <button id="sec_save_btn">
-            <label><span id="sec_save_spinner"></span>Save</label>
+            <label><span id="sec_save_spinner"></span>Salva</label>
           </button>
           <button id="sec_log_out_btn">
-            <label><span id="sec_log_out_spinner"></span>Log Out</label>
+            <label><span id="sec_log_out_spinner"></span>Disconnetti</label>
           </button>
         </div>
       </div>
@@ -321,11 +321,11 @@
     <div class="form">
       <div>
         <div class="form-control">
-          <label>Model:</label>
+          <label>Modello:</label>
           <span id="model"></span>
         </div>
         <div class="form-control">
-          <label>Device ID:</label>
+          <label>ID Dispositivo:</label>
           <span id="device_id"></span>
         </div>
         <div class="form-control" id="host_container">
@@ -333,11 +333,11 @@
           <span id="host"></span>
         </div>
         <div class="form-control" id="uptime_container" style="display: none">
-          <label>Uptime:</label>
+          <label>Tempo Attività:</label>
           <span id="uptime"></span>
         </div>
         <div class="form-control" id="sys_temp_container" style="display: none">
-          <label>Temperature:</label>
+          <label>Temperatura:</label>
           <span id="sys_temp"></span>&deg;C
         </div>
         <div class="form-control">
@@ -346,7 +346,7 @@
         </div>
         <div class="button-container">
           <button class="btn" id="reboot_btn">
-            <label>Reboot</label>
+            <label>Riavvia</label>
           </button>
           <button class="btn" id="reset_btn">
             <label>Reset</label>
@@ -362,13 +362,13 @@
     <div class="form">
       <div>
         <div class="form-control">
-          <label>Version:</label><span id="version"></span>
+          <label>Versione:</label><span id="version"></span>
         </div>
         <div class="form-wrap-control">
           <label>Build:</label><span id="fw_build"></span>
         </div>
         <div class="form-control" id="update_container" style="display: none">
-          <label>Update: </label>
+          <label>Aggiornamento: </label>
           <button id="update_btn">
             <label>
               <span id="update_btn_spinner"></span>
@@ -378,7 +378,7 @@
           <span id="update_status"></span>
         </div>
         <div class="form-control" id="revert_to_stock_container" style="display: none">
-          <label>Revert to Stock:</label>
+          <label>Riporta all'origine:</label>
           <button id="revert_btn">
             <label><span id="revert_btn_spinner"></span>Revert</label>
           </button>
@@ -391,12 +391,12 @@
         </div>
         <form style="display: inline">
           <div class="form-control">
-            <label>Update from file:</label>
+            <label>Aggiorna da File:</label>
             <input type="file" id="fw_select_file" name="file" accept=".zip" style="width: 200px;">
           </div>
           <div class="button-container">
             <button id="fw_upload_btn">
-              <label><span id="fw_spinner"></span>Upload</label>
+              <label><span id="fw_spinner"></span>Aggiorna</label>
             </button>
           </div>
         </form>
@@ -430,87 +430,87 @@
     <div class="form">
       <div>
         <div class="form-control" id="state_container">
-          <label for="state">Status:</label>
+          <label for="state">Stato:</label>
           <label class="switch">
             <input type="checkbox" id="state">
             <span class="slider round"></span>
           </label>
         </div>
         <div class="form-control" id="power_stats_container" style="display: none;">
-          <label for="power_stats">Power:</label>
+          <label for="power_stats">Potenza:</label>
           <span id="power_stats"></span>
         </div>
         <div>
           <div class="form-control">
-            <label for="name">Name:</label>
+            <label for="name">Nome:</label>
             <input type="text" id="name">
           </div>
           <div class="form-control">
             <label>HAP Service Type:</label>
             <select id="svc_type">
-              <option id="svc_type_-1" value="-1">Disabled</option>
-              <option id="svc_type_0" value="0">Switch</option>
-              <option id="svc_type_1" value="1">Outlet</option>
-              <option id="svc_type_2" value="2">Lock</option>
-              <option id="svc_type_3" value="3">Valve</option>
+              <option id="svc_type_-1" value="-1">Disabilitato</option>
+              <option id="svc_type_0" value="0">Interruttore</option>
+              <option id="svc_type_1" value="1">Presa Corrente</option>
+              <option id="svc_type_2" value="2">Lucchetto</option>
+              <option id="svc_type_3" value="3">Valvola</option>
             </select>
           </div>
           <div class="form-control" id="valve_type_container" style="display: none">
             <label id="valve_type_label"></label>
             <select id="valve_type">
-              <option id="valve_type_0" value="0">Generic Valve</option>
-              <option id="valve_type_1" value="1">Irrigation</option>
+              <option id="valve_type_0" value="0">Valvola Generica</option>
+              <option id="valve_type_1" value="1">Irrigazione</option>
             </select>
           </div>
           <div class="form-control" id="in_mode_container">
-            <label for="in_mode">Input Mode:</label>
+            <label for="in_mode">Modalità Input:</label>
             <select id="in_mode">
-              <option id="in_mode_0" value="0">Momentary</option>
-              <option id="in_mode_1" value="1">Toggle</option>
+              <option id="in_mode_0" value="0">Momentaneo</option>
+              <option id="in_mode_1" value="1">Alternato</option>
               <option id="in_mode_2" value="2">Edge</option>
-              <option id="in_mode_3" value="3">Detached</option>
-              <option id="in_mode_4" value="4">Activation</option>
-              <option id="in_mode_5" value="5">Edge (both inputs)</option>
-              <option id="in_mode_6" value="6">Activation (both inputs)</option>
+              <option id="in_mode_3" value="3">Disattivazione</option>
+              <option id="in_mode_4" value="4">Attivazione</option>
+              <option id="in_mode_5" value="5">Edge (Entrambi gli INgressi)</option>
+              <option id="in_mode_6" value="6">Attivazione (Entrambi gli Ingressi)</option>
             </select>
           </div>
           <div class="form-control" id="in_inverted_container" style="display: none">
-            <label for="in_inverted">Inverted Input:</label>
+            <label for="in_inverted">Input Invertito:</label>
             <label class="switch">
               <input type="checkbox" id="in_inverted">
               <span class="slider round"></span>
             </label>
           </div>
           <div class="form-control">
-            <label for="initial">Initial state:</label>
+            <label for="initial">Stato Iniziale:</label>
             <select id="initial">
               <option id="initial_0" value="0">Off</option>
               <option id="initial_1" value="1">On</option>
-              <option id="initial_2" value="2">Last</option>
+              <option id="initial_2" value="2">Come Ultimo</option>
               <option id="initial_3" value="3">Input</option>
             </select>
           </div>
           <div class="form-control">
-            <label for="out_inverted">Inverted Output:</label>
+            <label for="out_inverted">Putput Invertito:</label>
             <label class="switch">
               <input type="checkbox" id="out_inverted">
               <span class="slider round"></span>
             </label>
           </div>
           <div class="form-control">
-            <label for="auto_off">Auto Off:</label>
+            <label for="auto_off">Auto-Spegnimento:</label>
             <label class="switch">
               <input type="checkbox" id="auto_off">
               <span class="slider round"></span>
             </label>
           </div>
           <div class="form-control" id="auto_off_delay_container">
-            <label for="auto_off_delay">Auto Off Delay:</label>
+            <label for="auto_off_delay">Ritardo Auto-Spegnimento:</label>
             <input type="text" id="auto_off_delay" placeholder="D:HH:MM:SS.sss" required
               pattern="[0-9]+:(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\.[0-9]{3}">
           </div>
           <div class="form-control" id="state_led_en_container">
-            <label for="state_led_en">State LED:</label>
+            <label for="state_led_en">Stato LED:</label>
             <label class="switch">
               <input type="checkbox" id="state_led_en">
               <span class="slider round"></span>
@@ -518,7 +518,7 @@
           </div>
           <div class="button-container">
             <button id="save_btn">
-              <label><span id="save_spinner"></span>Save</label>
+              <label><span id="save_spinner"></span>Salva</label>
             </button>
           </div>
         </div>
@@ -535,42 +535,42 @@
           <div class="form-control">
             <label>HAP Type:</label>
             <select id="type">
-              <option id="type_6" value="6">Disabled</option>
-              <option id="type_3" value="3">Stateless Switch</option>
-              <option id="type_7" value="7">Motion Sensor</option>
-              <option id="type_8" value="8">Occupancy Sensor</option>
-              <option id="type_9" value="9">Contact Sensor</option>
-              <option id="type_10" value="10">Doorbell</option>
-              <option id="type_13" value="13">Leak Sensor</option>
-              <option id="type_14" value="14">Smoke Sensor</option>
+              <option id="type_6" value="6">Disabilitato</option>
+              <option id="type_3" value="3">Interruttore senza stato</option>
+              <option id="type_7" value="7">Sensore di Movimento</option>
+              <option id="type_8" value="8">Sensore di Presenza</option>
+              <option id="type_9" value="9">Sensore di Contatto</option>
+              <option id="type_10" value="10">Campanello</option>
+              <option id="type_13" value="13">Sensore di Perdita</option>
+              <option id="type_14" value="14">Sensore di Fumo</option>
             </select>
           </div>
           <div class="form-control">
-            <label>Name:</label>
+            <label>Nome:</label>
             <input type="text" id="name">
           </div>
           <div class="form-control">
-            <label>Input Mode:</label>
+            <label>Modalità Input:</label>
             <select id="in_mode">
-              <option id="in_mode_0" value="0">Momentary</option>
-              <option id="in_mode_1" value="1">Toggle, on = off = single press</option>
-              <option id="in_mode_2" value="2">Toggle, on = single, off = double</option>
+              <option id="in_mode_0" value="0">Momentaneo</option>
+              <option id="in_mode_1" value="1">attiva/disattiva, on = off = pressione singola</option>
+              <option id="in_mode_2" value="2">Toggle, on = Singolo, off = Doppio</option>
             </select>
           </div>
           <div class="form-control">
-            <label for="inverted">Inverted Input:</label>
+            <label for="inverted">Input Invertito:</label>
             <label class="switch">
               <input type="checkbox" id="inverted">
               <span class="slider round"></span>
             </label>
           </div>
           <div class="form-control">
-            <label>Last Event:</label>
+            <label>Ultimo Evento:</label>
             <span id="last_event"></span>
           </div>
           <div class="button-container">
             <button id="save_btn">
-              <label><span id="save_spinner"></span>Save</label>
+              <label><span id="save_spinner"></span>Salva</label>
             </button>
           </div>
         </div>
@@ -580,25 +580,25 @@
     <div class="container" id="di_template" style="display: none">
       <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/Input-Switch-Settings"
         target="_blank">?</a>
-      <h1 id="head">Disabled Input</h1>
+      <h1 id="head">Disabilita Input</h1>
       <div class="form">
         <div>
           <div class="form-control">
             <label>HAP Type:</label>
             <select id="type">
-              <option id="type_6" value="6">Disabled</option>
-              <option id="type_3" value="3">Stateless Switch</option>
-              <option id="type_7" value="7">Motion Sensor</option>
-              <option id="type_8" value="8">Occupancy Sensor</option>
-              <option id="type_9" value="9">Contact Sensor</option>
-              <option id="type_10" value="10">Doorbell</option>
-              <option id="type_13" value="13">Leak Sensor</option>
-              <option id="type_14" value="14">Smoke Sensor</option>
+              <option id="type_6" value="6">Disabilitato</option>
+              <option id="type_3" value="3">Interruttore senza Stato</option>
+              <option id="type_7" value="7">Sensore di Movimento</option>
+              <option id="type_8" value="8">Sensore di Presenza</option>
+              <option id="type_9" value="9">Sensore di Contatto</option>
+              <option id="type_10" value="10">Campanello</option>
+              <option id="type_13" value="13">Sensore di Perdita</option>
+              <option id="type_14" value="14">Sensore di FUmo</option>
             </select>
           </div>
           <div class="button-container">
             <button id="save_btn">
-              <label><span id="save_spinner"></span>Save</label>
+              <label><span id="save_spinner"></span>Salva</label>
             </button>
           </div>
         </div>
@@ -609,51 +609,51 @@
       <a class="helpbadge"
         href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/Input-Switch-Settings#motion-sensor--occupancy-sensor--contact-sensor"
         target="_blank">?</a>
-      <h1 id="head">Sensor</h1>
+      <h1 id="head">Sensore</h1>
       <div class="form">
         <div>
           <div class="form-control">
             <label>HAP Type:</label>
             <select id="type">
-              <option id="type_6" value="6">Disabled</option>
-              <option id="type_3" value="3">Stateless Switch</option>
-              <option id="type_7" value="7">Motion Sensor</option>
-              <option id="type_8" value="8">Occupancy Sensor</option>
-              <option id="type_9" value="9">Contact Sensor</option>
-              <option id="type_10" value="10">Doorbell</option>
-              <option id="type_13" value="13">Leak Sensor</option>
-              <option id="type_14" value="14">Smoke Sensor</option>
+              <option id="type_6" value="6">Disabilitato</option>
+              <option id="type_3" value="3">Interruttore senza Stat</option>
+              <option id="type_7" value="7">Sensore di Movimento</option>
+              <option id="type_8" value="8">Sensore di Presenza</option>
+              <option id="type_9" value="9">Sensore di Contatto</option>
+              <option id="type_10" value="10">Campanello</option>
+              <option id="type_13" value="13">Sensore di Perdita</option>
+              <option id="type_14" value="14">Sensore di Fumo</option>
             </select>
           </div>
           <div class="form-control">
-            <label>Name:</label>
+            <label>Nome:</label>
             <input type="text" id="name">
           </div>
           <div class="form-control">
-            <label for="inverted">Inverted Input:</label>
+            <label for="inverted">Inverti Input:</label>
             <label class="switch">
               <input type="checkbox" id="inverted">
               <span class="slider round"></span>
             </label>
           </div>
           <div class="form-control">
-            <label>Input Mode:</label>
+            <label>Modalità Input:</label>
             <select id="in_mode">
-              <option id="in_mode_0" value="0">Level</option>
-              <option id="in_mode_1" value="1">Pulse</option>
+              <option id="in_mode_0" value="0">Livello</option>
+              <option id="in_mode_1" value="1">Impulso</option>
             </select>
           </div>
           <div class="form-control" id="idle_time_container">
-            <label>Idle Time:</label>
+            <label>Tempo di Inattività</label>
             <input type="text" id="idle_time" style="width: 2em; min-width: 2em"> s
           </div>
           <div class="form-control">
-            <label>Status:</label>
+            <label>Stato:</label>
             <span id="status"></span>
           </div>
           <div class="button-container">
             <button id="save_btn">
-              <label><span id="save_spinner"></span>Save</label>
+              <label><span id="save_spinner"></span>Salva</label>
             </button>
           </div>
         </div>
@@ -663,15 +663,15 @@
     <div class="container" id="wc_template" style="display: none">
       <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/Roller-Shutter-Settings"
         target="_blank">?</a>
-      <h1 id="head">Window</h1>
+      <h1 id="head">Finestra</h1>
       <div class="form">
         <div>
           <div class="form-control">
-            <label>Name:</label>
+            <label>Nome:</label>
             <input type="text" id="name">
           </div>
           <div class="form-control">
-            <label>Status:</label>
+            <label>Stato:</label>
             <span id="state"></span> pos
             <span id="pos"></span>
           </div>
@@ -684,27 +684,27 @@
             </button>
           </div>
           <div class="form-control">
-            <label>Calibration:</label>
+            <label>Calibrazione:</label>
             <span id="cal"></span>
           </div>
           <div class="form-control">
-            <label>Input Mode:</label>
+            <label>Modalità Input:</label>
             <select id="in_mode">
-              <option id="in_mode_0" value="0">Separate - momentary</option>
-              <option id="in_mode_1" value="1">Separate - toggle</option>
-              <option id="in_mode_2" value="2">Single</option>
-              <option id="in_mode_3" value="3">Detached</option>
+              <option id="in_mode_0" value="0">Separato - Momentaneo</option>
+              <option id="in_mode_1" value="1">Separato - Alternato</option>
+              <option id="in_mode_2" value="2">Singolo</option>
+              <option id="in_mode_3" value="3">Distaccato</option>
             </select>
           </div>
           <div class="form-control">
-            <label>Swap Inputs:</label>
+            <label>Scambio Input:</label>
             <label class="switch">
               <input type="checkbox" id="swap_inputs">
               <span class="slider round"></span>
             </label>
           </div>
           <div class="form-control">
-            <label>Swap Outputs:</label>
+            <label>Scambio Uscite:</label>
             <label class="switch">
               <input type="checkbox" id="swap_outputs">
               <span class="slider round"></span>
@@ -712,10 +712,10 @@
           </div>
           <div class="button-container" id="btns">
             <button id="save_btn">
-              <label><span id="save_spinner"></span>Save</label>
+              <label><span id="save_spinner"></span>Salva</label>
             </button>
             <button id="cal_btn">
-              <label><span id="cal_spinner"></span>Calibrate</label>
+              <label><span id="cal_spinner"></span>Calibra</label>
             </button>
           </div>
         </div>
@@ -725,15 +725,15 @@
     <div class="container" id="ts_template" style="display: none">
       <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/Sensor-Settings"
         target="_blank">?</a>
-      <h1 id="head">Sensor</h1>
+      <h1 id="head">Sensore</h1>
       <div class="form">
         <div>
           <div class="form-control">
-            <label>Name:</label>
+            <label>Nome:</label>
             <input type="text" id="name">
           </div>
           <div class="form-control">
-            <label>Value:</label>
+            <label>Valore:</label>
             <span id="value" style="min-width: 40px; display: inline-block;"></span>
             <select id="unit" class="short">
               <option id="unit_0" value="0">&deg;C</option>
@@ -741,12 +741,12 @@
             </select>
           </div>
           <div class="form-control">
-            <label for="update_interval">Update Interval:</label>
+            <label for="update_interval">Intervallo Aggiornamento:</label>
             <input type="number" id="update_interval" min="1" max="1000" class="short"><span>&nbsp; s</span>
           </div>
           <div class="button-container">
             <button id="save_btn">
-              <label><span id="save_spinner"></span>Save</label>
+              <label><span id="save_spinner"></span>Salva</label>
             </button>
           </div>
         </div>
@@ -756,53 +756,53 @@
     <div class="container" id="gdo_template" style="display: none">
       <a class="helpbadge" href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/Garage-Door-Opener-Settings"
         target="_blank">?</a>
-      <h1 id="head">Garage Door</h1>
+      <h1 id="head">Porta Garage</h1>
       <div class="form">
         <div>
           <div class="form-control">
-            <label>Name:</label>
+            <label>Nome:</label>
             <input type="text" id="name">
           </div>
           <div class="form-control">
-            <label>Status:</label>
+            <label>Stato:</label>
             <span id="state"></span>
           </div>
           <div class="form-control">
             <label>Close Sensor:</label>
             <select id="close_sensor_mode">
-              <option id="close_sensor_mode_0" value="0">Normally Closed</option>
-              <option id="close_sensor_mode_1" value="1">Normally Open</option>
+              <option id="close_sensor_mode_0" value="0">Normalmente Chiuso</option>
+              <option id="close_sensor_mode_1" value="1">Normalmente Aperto</option>
             </select>
           </div>
           <div class="form-control" id="open_sensor_mode_container">
-            <label>Open Sensor:</label>
+            <label>Sensore Apertura:</label>
             <select id="open_sensor_mode">
-              <option id="open_sensor_mode_0" value="0">Normally Closed</option>
-              <option id="open_sensor_mode_1" value="1">Normally Open</option>
-              <option id="open_sensor_mode_2" value="2">Disabled</option>
+              <option id="open_sensor_mode_0" value="0">Normalmente Chiuso/option>
+              <option id="open_sensor_mode_1" value="1">Normalmente Aperto</option>
+              <option id="open_sensor_mode_2" value="2">Disabilitato</option>
             </select>
           </div>
           <div class="form-control" id="out_mode_container">
-            <label>Output Mode:</label>
+            <label>Modalità Output:</label>
             <select id="out_mode">
-              <option id="out_mode_0" value="0">Single</option>
-              <option id="out_mode_1" value="1">Dual</option>
+              <option id="out_mode_0" value="0">Singola</option>
+              <option id="out_mode_1" value="1">Duale</option>
             </select>
           </div>
           <div class="form-control">
-            <label>Movement Time:</label>
-            <input type="text" id="move_time" style="width: 2em; min-width: 2em;"> seconds
+            <label>Tempo Movimento:</label>
+            <input type="text" id="move_time" style="width: 2em; min-width: 2em;"> Secondi
           </div>
           <div class="form-control">
-            <label>Pulse Time:</label>
+            <label>Tempo di Impulso:</label>
             <input type="text" id="pulse_time_ms" style="width: 2em; min-width: 2em;"> ms
           </div>
           <div class="button-container" id="btns">
             <button id="save_btn">
-              <label><span id="save_spinner"></span>Save</label>
+              <label><span id="save_spinner"></span>Salva</label>
             </button>
             <button id="toggle_btn">
-              <label><span id="toggle_spinner"></span>Toggle</label>
+              <label><span id="toggle_spinner"></span>Alterna</label>
             </button>
           </div>
         </div>
@@ -816,19 +816,19 @@
       <div class="form">
         <div>
           <div class="form-control" id="state_container">
-            <label for="state">Status:</label>
+            <label for="state">Stato:</label>
             <label class="switch">
               <input type="checkbox" id="state">
               <span class="slider round"></span>
             </label>
           </div>
           <div class="form-control" id="power_stats_container" style="display: none;">
-            <label for="power_stats">Power:</label>
+            <label for="power_stats">Potenza:</label>
             <span id="power_stats"></span>
           </div>
           <div>
             <div class="form-control" id="color_container">
-              <label>Color:</label>
+              <label>Colore:</label>
               <span id="color_preview"></span>
               <span id="color_name"></span>
             </div>
@@ -837,23 +837,23 @@
               <input type="range" id="hue" min="0" max="360"><span id="hue_value"></span>
             </div>
             <div class="form-control" id="saturation_container">
-              <label>Saturation:</label>
+              <label>Saturazione:</label>
               <input type="range" id="saturation" min="0" max="100"><span id="saturation_value"></span>
             </div>
             <div class="form-control" id="color_temperature_container">
-              <label>Color Temperature:</label>
+              <label>Temperatura Colore:</label>
               <input type="range" id="color_temperature" min="50" max="400"><span id="color_temperature_value"></span>
             </div>
             <div class="form-control">
-              <label>Brightness:</label>
+              <label>Luminosità:</label>
               <input type="range" id="brightness" min="0" max="100"><span id="brightness_value"></span>
             </div>
             <div class="form-control">
-              <label for="transition_time">Transition Time:</label>
+              <label for="transition_time">Tempo Transizione:</label>
               <input type="number" id="transition_time" min="0" max="10000"><span>ms</span>
             </div>
             <div class="form-control">
-              <label>Name:</label>
+              <label>Nome:</label>
               <input type="text" id="name">
             </div>
             <div class="form-control" id="svc_hidden_container">
@@ -864,46 +864,46 @@
               </label>
             </div>
             <div class="form-control" id="in_mode_container">
-              <label for="in_mode">Input Mode:</label>
+              <label for="in_mode">Modalità Input:</label>
               <select id="in_mode">
-                <option id="in_mode_0" value="0">Momentary</option>
-                <option id="in_mode_1" value="1">Toggle</option>
+                <option id="in_mode_0" value="0">Momentaneo</option>
+                <option id="in_mode_1" value="1">Alternato</option>
                 <option id="in_mode_2" value="2">Edge</option>
-                <option id="in_mode_3" value="3">Detached</option>
-                <option id="in_mode_4" value="4">Activation</option>
+                <option id="in_mode_3" value="3">Distaccato</option>
+                <option id="in_mode_4" value="4">Attivato</option>
               </select>
             </div>
             <div class="form-control" id="in_inverted_container" style="display: none">
-              <label for="in_inverted">Inverted Input:</label>
+              <label for="in_inverted">Inverti Input:</label>
               <label class="switch">
                 <input type="checkbox" id="in_inverted">
                 <span class="slider round"></span>
               </label>
             </div>
             <div class="form-control">
-              <label for="initial">Initial state:</label>
+              <label for="initial">Stato Iniziale:</label>
               <select id="initial">
                 <option id="initial_0" value="0">Off</option>
                 <option id="initial_1" value="1">On</option>
-                <option id="initial_2" value="2">Last</option>
+                <option id="initial_2" value="2">Ultimo</option>
                 <option id="initial_3" value="3">Input</option>
               </select>
             </div>
             <div class="form-control">
-              <label for="auto_off">Auto off:</label>
+              <label for="auto_off">Auto-Spegnimento:</label>
               <label class="switch">
                 <input type="checkbox" id="auto_off">
                 <span class="slider round"></span>
               </label>
             </div>
             <div class="form-control" id="auto_off_delay_container">
-              <label for="auto_off_delay">Auto off delay:</label>
+              <label for="auto_off_delay">Ritaro Auto-Spegnimento:</label>
               <input type="text" id="auto_off_delay" placeholder="D:HH:MM:SS.sss" required
                 pattern="[0-9]+:(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\.[0-9]{3}">
             </div>
             <div class="button-container">
               <button id="save_btn">
-                <label><span id="save_spinner"></span>Save</label>
+                <label><span id="save_spinner"></span>Salva</label>
               </button>
             </div>
           </div>
