@@ -19,13 +19,13 @@
       <img id="logo" src="./logo.svg">
       <h1 class="title">Shelly-<b>HomeKit</b></h1>
       <div id="badges_container">
-        <a class="badge" id="notify_disconnected" style="display: none">Disconnected</a>
-        <a class="badge" id="notify_update" style="display: none" href="#update_container">Update</a>
-        <a class="badge" id="notify_overheat" style="display: none">Overheating</a>
-        <a class="badge" id="notify_failsafe" style="display: none">Failsafe mode</a>
+        <a class="badge" id="notify_disconnected" style="display: none">Disconnesso</a>
+        <a class="badge" id="notify_update" style="display: none" href="#update_container">Aggirna</a>
+        <a class="badge" id="notify_overheat" style="display: none">Surriscaldamento</a>
+        <a class="badge" id="notify_failsafe" style="display: none">Modalità Recupero</a>
       </div>
     </div>
-    <h1 id="device_name">Loading...</h1>
+    <h1 id="device_name">Caricamento...</h1>
   </div>
 
   <div class="container" id="auth_container" style="display: none">
@@ -34,16 +34,16 @@
     <div class="form">
       <div>
         <div class="form-control">
-          <label>Password:</label>
+          <label>Password Accesso:</label>
           <input type="password" id="auth_pass">
         </div>
         <div class="form-control" id="forgot_password" style="display: none">
           <a href="https://github.com/mongoose-os-apps/shelly-homekit/wiki/Security-Settings#password-recovery"
-            target="_blank">Forgot password?</a>
+            target="_blank">Password Dimenticata?</a>
         </div>
         <div class="button-container">
           <button id="auth_log_in_btn">
-            <label><span id="auth_log_in_spinner"></span>Log In</label>
+            <label><span id="auth_log_in_spinner"></span>Accedi</label>
           </button>
         </div>
       </div>
@@ -63,7 +63,7 @@
         <div class="form-control" id="sys_mode_container" style="display: none">
           <label>Funzione:</label>
           <select id="sys_mode">
-            <option id="sys_mode_0" value="0">Switch</option>
+            <option id="sys_mode_0" value="0">Interruttore</option>
             <option id="sys_mode_1" value="1">Tapparella</option>
             <option id="sys_mode_2" value="2">Garage</option>
             <option id="sys_mode_3" value="3">RGB</option>
@@ -446,7 +446,7 @@
             <input type="text" id="name">
           </div>
           <div class="form-control">
-            <label>HAP Service Type:</label>
+            <label>Tipo HAP:</label>
             <select id="svc_type">
               <option id="svc_type_-1" value="-1">Disabilitato</option>
               <option id="svc_type_0" value="0">Interruttore</option>
@@ -486,12 +486,12 @@
             <select id="initial">
               <option id="initial_0" value="0">Off</option>
               <option id="initial_1" value="1">On</option>
-              <option id="initial_2" value="2">Come Ultimo</option>
+              <option id="initial_2" value="2">Come Ultimo Stato</option>
               <option id="initial_3" value="3">Input</option>
             </select>
           </div>
           <div class="form-control">
-            <label for="out_inverted">Putput Invertito:</label>
+            <label for="out_inverted">Input Invertito:</label>
             <label class="switch">
               <input type="checkbox" id="out_inverted">
               <span class="slider round"></span>
@@ -857,7 +857,7 @@
               <input type="text" id="name">
             </div>
             <div class="form-control" id="svc_hidden_container">
-              <label>HAP Service Hidden:</label>
+              <label>Servizio HAP Nascosto:</label>
               <label class="switch">
                 <input type="checkbox" id="svc_hidden">
                 <span class="slider round"></span>
